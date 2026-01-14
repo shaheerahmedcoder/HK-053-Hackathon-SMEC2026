@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lora:ital,wght@0,400;0,500;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 40 30% 94%;
+    --foreground: 25 30% 20%;
+
+    --card: 40 25% 92%;
+    --card-foreground: 25 30% 20%;
+
+    --popover: 40 25% 92%;
+    --popover-foreground: 25 30% 20%;
+
+    --primary: 25 45% 30%;
+    --primary-foreground: 40 30% 94%;
+
+    --secondary: 35 20% 85%;
+    --secondary-foreground: 25 30% 20%;
+
+    --muted: 35 15% 88%;
+    --muted-foreground: 25 15% 45%;
+
+    --accent: 15 50% 45%;
+    --accent-foreground: 40 30% 94%;
+
+    --destructive: 0 65% 50%;
+    --destructive-foreground: 40 30% 94%;
+
+    --border: 25 20% 75%;
+    --input: 25 20% 75%;
+    --ring: 25 45% 30%;
+
+    --radius: 0.25rem;
+
+    /* Vintage palette */
+    --vintage-paper: 40 30% 94%;
+    --vintage-cream: 45 40% 92%;
+    --vintage-brown: 25 45% 25%;
+    --vintage-rust: 15 55% 42%;
+    --vintage-olive: 80 25% 35%;
+    --vintage-gold: 42 50% 50%;
+
+    --sidebar-background: 40 25% 92%;
+    --sidebar-foreground: 25 30% 20%;
+    --sidebar-primary: 25 45% 30%;
+    --sidebar-primary-foreground: 40 30% 94%;
+    --sidebar-accent: 35 20% 85%;
+    --sidebar-accent-foreground: 25 30% 20%;
+    --sidebar-border: 25 20% 75%;
+    --sidebar-ring: 25 45% 30%;
+  }
+
+  .dark {
+    --background: 25 30% 10%;
+    --foreground: 40 30% 90%;
+
+    --card: 25 25% 12%;
+    --card-foreground: 40 30% 90%;
+
+    --popover: 25 25% 12%;
+    --popover-foreground: 40 30% 90%;
+
+    --primary: 40 30% 90%;
+    --primary-foreground: 25 45% 20%;
+
+    --secondary: 25 20% 18%;
+    --secondary-foreground: 40 30% 90%;
+
+    --muted: 25 20% 18%;
+    --muted-foreground: 35 15% 60%;
+
+    --accent: 25 20% 18%;
+    --accent-foreground: 40 30% 90%;
+
+    --destructive: 0 55% 40%;
+    --destructive-foreground: 40 30% 90%;
+
+    --border: 25 20% 20%;
+    --input: 25 20% 20%;
+    --ring: 35 20% 70%;
+
+    --vintage-paper: 25 30% 10%;
+    --vintage-cream: 25 25% 15%;
+    --vintage-brown: 40 30% 85%;
+    --vintage-rust: 15 45% 55%;
+    --vintage-olive: 80 20% 45%;
+    --vintage-gold: 42 45% 55%;
+
+    --sidebar-background: 25 25% 10%;
+    --sidebar-foreground: 40 30% 90%;
+    --sidebar-primary: 40 50% 60%;
+    --sidebar-primary-foreground: 25 30% 10%;
+    --sidebar-accent: 25 20% 18%;
+    --sidebar-accent-foreground: 40 30% 90%;
+    --sidebar-border: 25 20% 18%;
+    --sidebar-ring: 40 50% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Playfair Display', serif;
+  }
+  
+  .font-body {
+    font-family: 'Lora', serif;
+  }
+  
+  .shadow-retro {
+    box-shadow: 4px 4px 0px hsl(var(--vintage-brown));
+  }
+  
+  .bg-vintage-paper {
+    background-color: hsl(var(--vintage-paper));
+  }
+  
+  .bg-vintage-cream {
+    background-color: hsl(var(--vintage-cream));
+  }
+  
+  .bg-vintage-brown {
+    background-color: hsl(var(--vintage-brown));
+  }
+  
+  .bg-vintage-rust {
+    background-color: hsl(var(--vintage-rust));
+  }
+  
+  .bg-vintage-olive {
+    background-color: hsl(var(--vintage-olive));
+  }
+  
+  .text-vintage-brown {
+    color: hsl(var(--vintage-brown));
+  }
+  
+  .text-vintage-rust {
+    color: hsl(var(--vintage-rust));
+  }
+  
+  .text-vintage-cream {
+    color: hsl(var(--vintage-cream));
+  }
+  
+  .border-vintage-brown {
+    border-color: hsl(var(--vintage-brown));
+  }
+}
